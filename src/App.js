@@ -1,24 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
-
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import CounterContainer from './components/CounterContainer';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar'
+import NFTpage from "./pages/NFTpage"
+import MainPage from './pages/MainPage';
+import ToonPromoPage from './pages/ToonPromoPage';
+import ToonCategoryPage from './pages/ToonCategoryPage';
+import PurchasePage from './pages/PurchasePage';
+import MyInfoPage from './pages/MyInfoPage';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header/>
+      <div class="main-container">
+        <Sidebar/>
+        <main class="main-content-container">
+          <Routes>
+            <Route path="/" element={<MainPage/>}/>
+            <Route path="/nft" element={<NFTpage/>}/>
+            <Route path="/promo" element={<ToonPromoPage/>}/>
+            <Route path="/category" element={<ToonCategoryPage/>}/>
+            <Route path="/buy" element={<PurchasePage/>}/>
+            <Route path="/my-info" element={<MyInfoPage/>}/>
+            <Route path="/count" element={<CounterContainer/>}/>
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 

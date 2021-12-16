@@ -1,0 +1,39 @@
+import React from "react";
+import "./index.css"
+
+const SellBox = () => {
+    return(
+        <div class="main-content-sell-container">
+            <div class="main-content-purchase-data-container">
+                <strong>매도가격</strong>
+                <span>
+                    <input type="number"/>
+                    <a href="#" class="purchase-plus"><i class="fas fa-plus"></i></a>
+                    <a href="#" class="purchase-minus"><i class="fas fa-minus"></i></a>
+                </span>
+            </div>
+            <div class="main-content-purchase-data-container">
+                <strong>매도수량</strong>
+                <span>
+                    <input type="number"/>
+                    <a href="#" class="purchase-plus"><i class="fas fa-plus"></i></a>
+                    <a href="#" class="purchase-minus"><i class="fas fa-minus"></i></a>
+                </span>
+            </div>
+            <div class="main-content-purchase-data-container">
+                <strong>판매총액</strong>
+                <span>
+                    <input type="number" readonly />
+                </span>
+            </div>
+            <div class="main-content-purchase-btn-container">
+                <strong>최소 판매금액 1, 수수료 0.020</strong>
+                <span>
+                    <button type="button">구매</button>
+                </span>
+            </div>
+        </div>
+    )
+}
+
+export default SellBox

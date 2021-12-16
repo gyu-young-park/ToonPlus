@@ -1,0 +1,45 @@
+.main-content-min-category-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+    background-color: #ffff;
+    margin-bottom: 2rem;
+    padding: 0.5rem 1rem;
+}
+
+.main-content-min-category-title-container{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.main-content-min-category-title{
+    font-size: 1.5rem;
+}
+
+.main-content-min-category-btns-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+
+.main-content-webtoon-list-container{
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 720px;
+    background-color: rgb(255, 255, 255);
+    padding: 2rem 2rem;
+    overflow: auto;
+}
+
+.main-content-webtoon-list-container > h2 {
+    position: absolute;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}

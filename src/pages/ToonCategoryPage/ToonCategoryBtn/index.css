@@ -1,0 +1,18 @@
+
+.main-content-min-category-btn-container{
+    margin-right: 2rem;
+    width: 90px;
+    height: 25px;
+    vertical-align: middle;
+    text-align: center;
+    background: #eff1f4;
+    border: 1px black;
+    border-radius: 3rem;
+}
+
+.main-content-min-category-btn{
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.5rem;
+    color:#000000;
+}

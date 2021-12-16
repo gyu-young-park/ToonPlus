@@ -1,0 +1,76 @@
+.main-content-promo-container{
+    width: 100%;
+    height: 400px;
+    background-color: #ffff;
+    margin-bottom: 2rem;
+}
+
+.main-content-rank-catergory-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content-32-card{
+    width: 32%;
+    height: 450px;
+    background-color: #ffff;
+    overflow: auto;
+}
+
+.main-content-rank-author-container{
+    
+}
+
+.main-content-rank-category-container{
+    
+}
+
+.main-content-category-container{
+    
+}
+
+.leaderboard > header {
+    --start: 15%;
+    --end: 15%;
+    height: 80px;
+    color: #fff;
+    position: relative;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+}
+
+.leaderboard-title{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: calc(var(--start) * .75);
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.leaderboard-title > span {
+    display: block;
+}
+
+.leaderboard-title-top{
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.65rem;
+}
+
+.leaderboard-title-bottom{
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    opacity: .65;
+    transform: translateY(-0.2rem);
+}
+
+.leaderboard-profiles{
+    background-color: #fff;
+    border-radius: 0 0 12px 12px;
+    padding: 15px 15px 20px;
+    display: grid;
+    row-gap: 8px;
+}

@@ -1,0 +1,62 @@
+
+.main-content-hot-webtoon-list-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height:370px;
+    padding: 1rem 0;
+}
+
+.main-content-hot-webtoon-list-card-container{
+    width: 23%;
+    height: 100%;
+    border: 2px solid #dab3ee;
+    border-radius: 3rem;
+}
+
+.main-content-hot-weboot-list-card-img-container{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 1rem 0 1rem;
+    height: 60%;
+}
+
+.main-content-hot-weboot-list-card-img{
+    width: 100%;
+    border-radius: 10%;
+}
+
+.main-content-hot-webtoon-list-card-description-container{
+    text-align: center;
+    height: 30%;
+    padding: 1rem;
+    border-top: 2px solid #dab3ee;
+}
+
+.main-content-hot-webtoon-list-card-title{
+    font-size: 2rem;
+}
+
+.main-content-hot-webtoon-list-card-description {
+    font-size: 1.5rem;
+}
+
+.main-content-hot-webtoon-list-card-btn-container{
+    height: 10%;
+}
+
+.main-content-hot-webtoon-list-card-btn{
+    float: right;
+    margin-right: 10px;
+    width: 80px;
+    height: 27px;
+    font-size: 1.5rem;
+}
+
+.main-content-hot-webtoon-list-card-btn-show{
+
+}
+
+.main-content-hot-webtoon-list-card-btn-buy{
+
+}

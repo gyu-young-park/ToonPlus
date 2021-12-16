@@ -1,0 +1,37 @@
+.main-content-interview-card-container{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.main-content-interview-card{
+    width: 32%;
+    height: 100%;
+    display: flex;
+    padding: 2rem 2rem;
+}
+
+.main-content-interview-card-description-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.main-content-interciew-card-img{
+    height: 100%;
+}
+
+.main-content-interview-card-title{
+    font-size: 3rem;
+}
+
+.main-content-interview-card-content{
+    font-size: 1.5rem;
+}
