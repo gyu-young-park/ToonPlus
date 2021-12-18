@@ -1,11 +1,6 @@
 import React from "react";
 import "./index.css"
-import banana from "../../img/banana.jpg"
-import reba from "../../img/reba.webp"
-import bach from "../../img/bach.webp"
-import wedding from "../../img/wedding.webp"
-import eatting from "../../img/eatting.webp"
-import perfect from "../../img/perfect.webp"
+import love from "../../img/love.png"
 import ToonCategoryBtn from "./ToonCategoryBtn";
 import ToonCategoryWebtoonCard from "./ToonCategoryWebtoonCard";
 
@@ -29,12 +24,12 @@ const ToonCategoryPage = () => {
             </div>
             <div class="main-content-webtoon-list-container">
                 <h2>#일상</h2>
-                <ToonCategoryWebtoonCard image={banana}/>
-                <ToonCategoryWebtoonCard image={reba}/>
-                <ToonCategoryWebtoonCard image={bach}/>
-                <ToonCategoryWebtoonCard image={wedding}/>
-                <ToonCategoryWebtoonCard image={eatting}/>
-                <ToonCategoryWebtoonCard image={perfect}/>
+                <ToonCategoryWebtoonCard image={love}/>
+                <ToonCategoryWebtoonCard image={love}/>
+                <ToonCategoryWebtoonCard image={love}/>
+                <ToonCategoryWebtoonCard image={love}/>
+                <ToonCategoryWebtoonCard image={love}/>
+                <ToonCategoryWebtoonCard image={love}/>
             </div>
         </>
     )

@@ -23,8 +23,8 @@ const Sidebar = () => {
                 </Link>
             </div>
             <div class="sidebar-content-container">
-                <Link to="" class="sidebar-content">
-                    <span>Exchange</span>
+                <Link to="nft-send" class="sidebar-content">
+                    <span>NFT Send</span>
                     <i class="fas fa-sync-alt"></i>
                 </Link>
             </div>

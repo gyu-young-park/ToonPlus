@@ -1,13 +1,7 @@
 import React from "react";
 import "./index.css"
 import {useNavigate} from "react-router-dom"
-import banana from "../../../img/banana.jpg"
-import romance from "../../../img/romance.webp"
-import bl from "../../../img/bl.webp"
-import fantasy from "../../../img/fantasy.png"
-import sexy from "../../../img/sexy.webp"
-import man from "../../../img/man.webp"
-import onlylevelup from "../../../img/onlylevelup.jpg"
+import love from "../../../img/love.png"
 import ToonPromoLeaderboardUnit from "../ToonPromoLeaderboardUnit";
 const ToonPromoLeaderboardCategory = () => {
     
@@ -27,35 +21,35 @@ const ToonPromoLeaderboardCategory = () => {
             
             <main class="leaderboard-profiles">
                 <ToonPromoLeaderboardUnit
-                        image={banana}
+                        image={love}
                         name={"일상"}
                         value={""}
                         status={""}
                         onclickHandler={onClickCategory}
                     />
                 <ToonPromoLeaderboardUnit
-                        image={romance}
+                        image={love}
                         name={"로맨스"}
                         value={""}
                         status={""}
                         onclickHandler={onClickCategory}
                     />
                 <ToonPromoLeaderboardUnit
-                        image={onlylevelup}
+                        image={love}
                         name={"이세계"}
                         value={""}
                         status={""}
                         onclickHandler={onClickCategory}
                     />
                 <ToonPromoLeaderboardUnit
-                        image={man}
+                        image={love}
                         name={"소년만화"}
                         value={""}
                         status={""}
                         onclickHandler={onClickCategory}
                     />
                 <ToonPromoLeaderboardUnit
-                        image={fantasy}
+                        image={love}
                         name={"판타지"}
                         value={""}
                         status={""}
@@ -63,7 +57,7 @@ const ToonPromoLeaderboardCategory = () => {
                     />
 
                 <ToonPromoLeaderboardUnit
-                        image={bl}
+                        image={love}
                         name={"BL"}
                         value={""}
                         status={""}
@@ -71,7 +65,7 @@ const ToonPromoLeaderboardCategory = () => {
                     />
 
                 <ToonPromoLeaderboardUnit
-                        image={sexy}
+                        image={love}
                         name={"19+"}
                         value={""}
                         status={""}

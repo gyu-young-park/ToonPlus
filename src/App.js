@@ -12,6 +12,7 @@ import MyInfoPage from './pages/MyInfoPage';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import LoginPage from './pages/LoginPage';
+import NFTSendPage from './pages/NFTSendPage'
 function App() {
   const { authStatus } = useSelector(state => ({
     authStatus: state.login.authStatus,
@@ -36,6 +37,7 @@ function App() {
               <Route path="/buy" element={<PurchasePage/>}/>
               <Route path="/my-info" element={<MyInfoPage/>}/>
               <Route path="/count" element={<CounterContainer/>}/>
+              <Route path="/nft-send" element={<NFTSendPage/>}/>
             </Routes>
           </main>
         </div> 

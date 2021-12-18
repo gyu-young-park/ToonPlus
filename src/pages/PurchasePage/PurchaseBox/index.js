@@ -1,20 +1,8 @@
 import React, { useState } from "react";
 import "./index.css"
 
-const PurchaseBox = () => {
-    const [price, setPrice] = useState(6000)
+const PurchaseBox = ({price, name, unit}) => {
     const [count, setCount] = useState(0)
-
-    const onClickUpPrice = (e) =>{
-        e.preventDefault()
-        setPrice(price + 10)
-    }
-
-    const onClickDownPrice = (e) =>{
-        e.preventDefault()
-        if(price - 10 <= 0) return
-        setPrice(price - 10)
-    }
 
     const onClickUpCount = (e) => {
         e.preventDefault()
@@ -23,21 +11,21 @@ const PurchaseBox = () => {
 
     const onClickDownCount = (e) => {
         e.preventDefault()
-        if(count - 1 < 0) return
+        if(count - 1 < 0) return;
         setCount(count-1)
     }
     return(
         <div class="main-content-purchase-container">
             <div class="main-content-purchase-data-container">
-                <strong>매수가격</strong>
+                <strong>{name}</strong>
                 <span>
-                    <input type="number" value={price} onChange={(e) => setPrice(e.target.value)}/>
-                    <a href="#" class="purchase-plus" onClick={onClickUpPrice}><i class="fas fa-plus"></i></a>
-                    <a href="#" class="purchase-minus" onClick={onClickDownPrice}><i class="fas fa-minus"></i></a>
+                    <input type="number" value={price}/>
+                    <a href="#" class="purchase-plus"><i class="fas fa-plus"></i></a>
+                    <a href="#" class="purchase-minus"><i class="fas fa-minus"></i></a>
                 </span>
             </div>
             <div class="main-content-purchase-data-container">
-                <strong>주문수량</strong>
+                <strong>토큰 개수</strong>
                 <span>
                     <input type="number" value={count}/>
                     <a href="#" class="purchase-plus" onClick={onClickUpCount}><i class="fas fa-plus"></i></a>
@@ -45,7 +33,7 @@ const PurchaseBox = () => {
                 </span>
             </div>
             <div class="main-content-purchase-data-container">
-                <strong>주문총액</strong>
+                <strong>{unit}</strong>
                 <span>
                     <input type="number" readonly value={count * price}/>
                 </span>

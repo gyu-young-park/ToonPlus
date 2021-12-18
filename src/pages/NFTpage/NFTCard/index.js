@@ -10,16 +10,16 @@ const NFTCard = ({image}) => {
                 </div>
                 <div class="movie__content">
                     <div class="movie__title">
-                    <h1 class="heading__primary">슬픈 바나나의 자화상 <i class="fas fa-fire"></i></h1>
+                    <h1 class="heading__primary">슬픈 망나니의 자화상 <i class="fas fa-fire"></i></h1>
                     <div class="movie__tag movie__tag--1">#action</div>
                     <div class="movie__tag movie__tag--2">#thriller</div>
                     </div>
                     <p class="movie__description">
-                    와나나가 그린 첫번째 바나나툰의 얼굴이다. 세상에 단 하나밖에 존재하지 않는 바나나툰의 자화상은 현대인의 슬픔을 표현한다.
+                    희동윤이 그린 첫번째 웹툰으로 슬픈 자화상을 하고있는 얼굴이다. 세상에 단 하나밖에 존재하지 않는 해당 자화상은 현대인의 슬픔을 표현한다.
                     </p>
                     <div class="movie__details">
                     <p class="movie__detail"><span class="icons icons-red"><i class="fas fa-camera-retro"></i> </span>Buzz
-                        Wanana
+                        Yoon
                     </p>
                     <p class="movie__detail">
                         <span class="icons icons-grey"><i class="fas fa-clock"></i> 

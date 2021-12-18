@@ -1,7 +1,7 @@
 import React from "react";
 import ToonPromoLeaderboardUnit from "../ToonPromoLeaderboardUnit";
 import "./index.css"
-import onlylevelup from "../../../img/onlylevelup.jpg"
+import love from "../../../img/love.png"
 
 const ToonPromoLeaderBoardWebtoon = () => {
     return(
@@ -15,7 +15,7 @@ const ToonPromoLeaderBoardWebtoon = () => {
             
             <main class="leaderboard-profiles">
                 <ToonPromoLeaderboardUnit
-                        image={onlylevelup}
+                        image={love}
                         name={"banana"}
                         value={"45.2%"}
                         status={"UP"}

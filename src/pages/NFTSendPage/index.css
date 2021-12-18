@@ -1,0 +1,132 @@
+.main-content-ntf-send-main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content-nft-send-container{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    justify-content: space-evenly;
+}
+
+.main-content-nft-send-left-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content-nft-send-left-container div {
+    margin-bottom: 3rem;
+}
+
+.main-content-nft-send-left-container{
+
+}
+
+.main-content-nft-send-main-form{
+  position: relative;
+  display: inline-block;
+  max-width: 700px;
+  min-width: 500px;
+  box-sizing: border-box;
+  padding: 30px 25px;
+  border-radius: 40px;
+  margin: 40px 0;
+  background: linear-gradient(to right, #e8cff3, #9759f3);
+}
+.main-content-nft-send-main-form > h1{
+    color: white;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    margin-left: 15px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}      
+.main-content-nft-send-main-form > button{
+    margin-top: 35px;
+    background-color: white;
+    border: 1px solid #fcacea;
+    line-height: 0;
+    font-size: 17px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 20px 15px ;
+    border-radius: 60px;
+    color: #fcacea;
+    margin-bottom: 1rem;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.main-content-nft-send-main-form > button:hover{
+    color: #75035b;
+    color: #75035b;
+}
+.question{
+    position: relative;
+    padding: 10px 0;
+}
+.main-content-nft-send-main-form:first-of-type{
+    padding-top: 0;
+}
+
+.main-content-nft-send-main-form:last-of-type{
+    padding-bottom: 0;
+}
+.main-content-nft-send-main-form:last-of-type > label{
+    transform-origin: left center;
+    color: #fcacea;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    font-size: 17px;
+    box-sizing: border-box;
+
+    display: block;
+    position: absolute;
+    margin-top: 40px;
+    z-index: 2;
+    pointer-events: none;
+}
+.main-content-nft-send-main-form:last-of-type input{
+    appearance: none;
+    background-color: none;
+    border: 1px solid #fcacea;
+    line-height: 0;
+    font-size: 17px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 60px;
+    color: black;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    position: relative;
+    z-index: 1;
+}
+      
+      /* &:focus
+        outline: none
+        background: $red
+        color: white
+        margin-top: 30px
+        
+      &:valid
+        margin-top: 30px
+          
+      &:focus ~ label
+        @include translate( 0 , -35px )
+      
+      &:valid ~ label
+        text-transform: uppercase
+        font-style: italic
+        @include transform( translate( 5px , -35px ) scale(0.6)) */

@@ -1,7 +1,7 @@
 import React from "react";
 import ToonPromoLeaderboardUnit from "../ToonPromoLeaderboardUnit";
 import "./index.css"
-import banana from "../../../img/banana.jpg"
+import love from "../../../img/love.png"
 import anonymous_girl from "../../../img/undraw_female_avatar_w3jk.png"
 import anonymous_boy from "../../../img/undraw_male_avatar_323b.png"
 
@@ -16,8 +16,8 @@ const ToonPromoLeaderboardAuthor = () => {
             </header>
             <main class="leaderboard-profiles">
                 <ToonPromoLeaderboardUnit
-                    image={banana}
-                    name={"wanana"}
+                    image={love}
+                    name={"gyu"}
                     value={"63.2%"}
                     status={"UP"}
                 />
