@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./index.css"
 
-const SellBox = ({price, name, unit}) => {
+const SellBox = ({price, name, unit, unitPrice}) => {
     const [count, setCount] = useState(0)
     const onClickUpCount = (e) => {
         e.preventDefault()
@@ -35,7 +35,7 @@ const SellBox = ({price, name, unit}) => {
             <div class="main-content-purchase-data-container">
                 <strong>{unit}</strong>
                 <span>
-                    <input type="number" readonly value={count * price}/>
+                    <input type="number" readonly value={count* unitPrice}/>
                 </span>
             </div>
             <div class="main-content-purchase-btn-container">

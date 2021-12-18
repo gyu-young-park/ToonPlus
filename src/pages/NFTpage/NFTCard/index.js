@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css"
 
-const NFTCard = ({image}) => {
+const NFTCard = ({image, transaction}) => {
     return(
         <>
             <figure class="movie">
@@ -25,11 +25,10 @@ const NFTCard = ({image}) => {
                         <span class="icons icons-grey"><i class="fas fa-clock"></i> 
                         </span>2021 12/15 12 32
                     </p>
-                    <p class="movie__detail"><span class="icons icons-yellow"><i class="fas fa-file-invoice-dollar"></i>
-                        </span>231 klay</p>
+                    
                     </div>
                 </div>
-                <div class="movie__price">231 klay</div>
+                <div class="movie__price">{transaction}</div>
             </figure>
         </>
     )

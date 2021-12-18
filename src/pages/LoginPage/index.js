@@ -28,8 +28,8 @@ const LoginPage = () => {
                 <div class="top-logo-wrap">
                     
                 </div>
-                <h1>How does a login system work?</h1>
-                <p>저희는 Klaytn계정을 이용하여 로그인하여 더욱 안전하게 계정을 보호합니다. </p>
+                <h1>How does a Toon+ system work?</h1>
+                <p>튠플러스에 오신 것을 환영합니다. 다양한 웹툰을 투자해보고 NFT를 받아보세요!</p>
             </div>
             <div class="login-form-left-side">
                 <div class="login-top-wrap">

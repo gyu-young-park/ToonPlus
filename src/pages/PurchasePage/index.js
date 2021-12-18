@@ -49,8 +49,9 @@ const poolImmutablesAbi = [
 //   };
 //   return PoolImmutables;
 // }
-
-const data =  [
+const USDC = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+const WETH = "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+const datas =  [
 	["TOON", 
   [1327, 1369, 1289, 1348],
 	[1348, 1371, 1314, 1320],
@@ -97,13 +98,15 @@ const data =  [
 	[1533, 1554, 1476, 1490],
 	[1490, 1494, 1432, 1443]
 ]]
-
+let temp = ["TOON"]
+let dataTemp = []
 const PurchasePage = () => {
     const toonPriceChart = useRef(null)
     const [token0, setToken0] = useState("")
     const [token1, setToken1] = useState("")
     const [token0Price, setToken0Price] = useState(0)
     const [token1Price, setToken1Price] = useState(0)
+    const [data, setData] = useState([])
     useEffect(() => {
       // getPoolImmutables().then((result) => {
       //   console.log(result);
@@ -126,6 +129,19 @@ const PurchasePage = () => {
           }
         }`
 
+        const query1 = `{ poolDayDatas(first: 10, orderBy: date, where: {
+            pool: "0x1d42064fc4beb5f8aaf85f4617ae8b3b5b8bd801",
+            date_gt: 1633642435
+          } ) {
+            date
+            liquidity
+            sqrtPrice
+            token0Price
+            token1Price
+            volumeToken0
+            volumeToken1
+          }
+        }`
         // const query = `query($id : String!){
         //   factory(id: $id){
         //     poolCount
@@ -138,7 +154,72 @@ const PurchasePage = () => {
           uri: 'https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3',
           cache: new InMemoryCache()
         });
-        
+      
+        client.query({
+          query: gql`{ poolDayDatas(first: 1000, orderBy: date, where: {
+            pool: "0x8ad599c3a0ff1de082011efddc58f1908eb6e6d8",
+            date_gt: 1634642436
+            } ) {
+              date
+              liquidity
+              sqrtPrice
+              token0Price
+              token1Price
+              volumeToken0
+              volumeToken1
+            }
+          }`
+        }).then(res => {
+          for(let i = 0; i < res.data.poolDayDatas.length; i++)
+          {
+            temp.push(res.data.poolDayDatas[i].token0Price/2000)
+            if(temp.length >= 4){
+              dataTemp.push(temp)
+              console.log(dataTemp)
+              temp = []
+            }
+          }
+        })
+
+        setTimeout(()=>{
+          console.log(dataTemp)
+          setData([...dataTemp])
+        },4000)
+
+        setTimeout(()=>{
+          console.log(data)
+          bb.generate({
+            data: {
+              columns: datas,
+              type: candlestick(), // for ESM specify as: candlestick()
+              colors: {
+                Banana: "green"
+              },
+              labels: true
+            },
+            candlestick: {
+              color: {
+                down: "red"
+              },
+              width: {
+                ratio: 0.1
+              }
+            },
+            axis: {
+              x: {
+                padding: {
+                  left: 1,
+                  right: 1
+                }
+              }
+            },
+            bindto: toonPriceChart.current,
+            size: {
+                height: 450
+            }
+          });
+        },5000)
+
         client
         .query({
           query: gql`
@@ -159,44 +240,13 @@ const PurchasePage = () => {
               token1Price
             }
           }
-          `
-        })
-        .then(result => {
+          `}).then(result => {
           console.log(result.data.pool)
           setToken0Price(result.data.pool.token0Price)
           setToken1Price(result.data.pool.token1Price)
           setToken0(result.data.pool.token0.symbol)
           setToken1(result.data.pool.token1.symbol)
-          bb.generate({
-            data: {
-              columns: data,
-              type: candlestick(), // for ESM specify as: candlestick()
-              colors: {
-                Banana: "green"
-              },
-              labels: true
-            },
-            candlestick: {
-              color: {
-                down: "red"
-              },
-              width: {
-                ratio: 0.8
-              }
-            },
-            axis: {
-              x: {
-                padding: {
-                  left: 1,
-                  right: 1
-                }
-              }
-            },
-            bindto: toonPriceChart.current,
-            size: {
-                height: 450
-            }
-          });
+
         });
     }, [])
 
@@ -216,8 +266,8 @@ const PurchasePage = () => {
                         </div>
                     </div>
                     <div class="main-content-purchase-sell-container">
-                        <PurchaseBox price={token0Price} name={token0} unit={token1}/>
-                        <SellBox price={token1Price} name={token1} unit={token0}/>
+                        <PurchaseBox price={Number(token0Price) - 2400} name={"Toon"} unit={token1} unitPrice={token1Price}/>
+                        <SellBox price={token1Price} name={token1} unit={"Toon"} unitPrice={Number(token0Price) - 2400}/>
                     </div>
                 </div>
                 <div class="main-content-toon-info-container">
